@@ -21,6 +21,9 @@ def normalize_phone(phone):
     return result
 
 def duplicate_account(account, contact):
+    if account[2] == '':
+        account.insert(2, contact[2])
+        account.pop(3)
     if account[3] == '':
         account.insert(3, contact[3])
         account.pop(4)
